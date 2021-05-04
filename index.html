@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Project Number 2</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery.canvasjs.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <!-- https://api.coingecko.com/api/v3/coins/list  all the data-->
+</head>
+
+<body>
+
+    <header class="navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <button class="btn nav-item nav-link active" onclick="showHomePage()">Home </button>
+                    <!-- <a class="nav-link" id="home" onclick="showHomePage()">Home &nbsp; /<span class="sr-only">(current)</span></a> -->
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link" id="live-reports" onclick="moveToLiveReports()">Live Reports &nbsp; /</a> -->
+                    <button class="btn nav-item nav-link active" onclick="showAboutPage()">About <span
+                            class="sr-only">(current)</span></button>
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link" id="about" onclick="moveToAbout()">About</a> -->
+                    <button class="btn nav-item nav-link active" onclick="showLiveReports()">Live Reports</button>
+                </li>
+            </ul>
+
+            <div class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Insert Coins" aria-label="Search"
+                    id="filter-term" />
+                <button class="btn btn-outline-success my-2 my-sm-0" onclick="filterCoins()"
+                    id="filter-btn">Search</button>
+            </div>
+        </div>
+
+    </header>
+    <h1 id="headline">Crypto Coins</h1>
+    <!-- background -->
+    <div id="coins" class="row"> </div>
+    <!-- graph -->
+    <div id="report-container" ></div>
+    <!-- modal -->
+    <div id="warning-modal" class="modal">
+        <div class="modal-content">
+            <h1 id="modal-title">Sorry You can only choose 5 coins</h1>
+            <p id="modal-body"></p>
+        </div>
+    </div>
+    <!-- about me -->
+    <div class="aboutMe">
+        <p class="aboutMeParagraph">
+        <h1>Hi! I'm Ron Melnitcki</h1>
+        <h3> I'm 27 years old from Ramat-Gan and I'm a student at John Bryce.</h3>
+        </p><br>
+        <p class="aboutMeParagraph">
+        <h3>I used to be a student in Ariel University, I've decided to leave Ariel Institution and start a Full
+            Stack Developer career, and hope that the course in John Bryce would help become a good developer, with
+            better mind.</h3>
+        </p><br>
+        <p class="aboutMeParagraph">
+        <h3> When I'm not studying or working, you probably could find me at those places:
+            <ul id="boldpoint">
+                <li>Skatepark</li>
+                <li>With my Girlfriend</li>
+                <li>With my friends</li>
+                <li>Playing my PS4</li>
+                <li>Watching LFC</li>
+            </ul>
+            <!-- <img src="pictureOfMe.jpeg" id="pictureOfMe"> -->
+        </h3>
+        </p>
+
+
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
